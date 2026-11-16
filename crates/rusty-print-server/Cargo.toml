@@ -1,0 +1,44 @@
+[package]
+name = "rusty-print-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rusty-print-common = { path = "../rusty-print-common" }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+axum = { version = "0.8", features = ["multipart"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+mdns-sd = "0.21"
+image = "0.25"
+rust-embed = "8.5"
+mime_guess = "2.0"
+toml = "0.8"
+qrcode = { version = "0.14", default-features = false }
+bytes = "1.10"
+
+[target.'cfg(windows)'.dependencies]
+windows-registry = "0.6.1"
+windows = { version = "0.58", features = [
+    "Foundation",
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_System_WinRT",
+    "Win32_Graphics_Gdi",
+    "Win32_Graphics_Printing",
+    "Win32_Storage_FileSystem",
+    "Win32_Storage_Xps",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Shell",
+    "Storage",
+    "Storage_Streams",
+    "Data_Pdf",
+] }

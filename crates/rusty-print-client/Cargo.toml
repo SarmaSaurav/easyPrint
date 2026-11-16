@@ -1,0 +1,17 @@
+[package]
+name = "rusty-print-client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rusty-print-common = { path = "../rusty-print-common" }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+reqwest = { version = "0.12", default-features = false, features = ["json", "multipart", "stream", "rustls-tls"] }
+mdns-sd = "0.21"
+clap = { version = "4.5", features = ["derive"] }

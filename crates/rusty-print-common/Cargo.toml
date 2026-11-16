@@ -1,0 +1,11 @@
+[package]
+name = "rusty-print-common"
+version = "0.1.0"
+edition = "2021"
+description = "Shared data structures and protocol for rusty-print"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }

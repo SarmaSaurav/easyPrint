@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Rusty Print</string>
+    <string name="print_service_name">Rusty Print Service</string>
+</resources>
